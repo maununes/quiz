@@ -1,0 +1,12 @@
+<h2>Certificado</h2>
+<hr>
+
+<h2>{{nomejogador}}</h2>
+
+<h3>
+	Você acertou {{mostrarPorcentagemAcerto()}}% das perguntas, {{totalAcertos()}} de {{dados.length}}.
+</h3>
+
+<input class="no-print" type="button" value="Imprimir" onclick="window.print()">
+<input class="no-print" type="button" value="Começar de novo" ng-click="goToIntroducao()">
+	

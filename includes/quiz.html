@@ -1,0 +1,26 @@
+<table width="50%" style="float: left;padding-left:10px;">
+	<tr>
+		<td><div style="overflow:auto; width:100%px;height:390px"><span ng-bind-html="perguntaAtual.pergunta | unsafe"></span></div></td>
+	</tr>
+</table>
+
+<div style="overflow:auto; width:100%px;height:390px">
+	<table width="100%" style="padding:10px">
+		<tr>
+			<td width="60px"><input type="radio" name="resposta" value="" ng-click="escolherResposta(perguntaAtual.resp1)" ng-checked="(perguntaAtual.resp1 == mostraRespostaEscolhida())"> a) </td>
+			<td><span ng-bind-html="perguntaAtual.resp1 | unsafe"></span></td>
+		</tr>
+		<tr>
+			<td width="60px"><input type="radio" name="resposta" value="" ng-click="escolherResposta(perguntaAtual.resp2)" ng-checked="(perguntaAtual.resp2 == mostraRespostaEscolhida())"> b) </td>
+			<td><span ng-bind-html="perguntaAtual.resp2 | unsafe"></span></td>
+		</tr>
+		<tr>
+			<td width="60px"><input type="radio" name="resposta" value="" ng-click="escolherResposta(perguntaAtual.resp3)" ng-checked="(perguntaAtual.resp3 == mostraRespostaEscolhida())"> c) </td>
+			<td><span ng-bind-html="perguntaAtual.resp3 | unsafe"></span></td>
+		</tr>
+		<tr>
+			<td width="60px"><input type="radio" name="resposta" value="" ng-click="escolherResposta(perguntaAtual.resp4)" ng-checked="(perguntaAtual.resp4 == mostraRespostaEscolhida())"> d) </td>
+			<td><span ng-bind-html="perguntaAtual.resp4 | unsafe"></span></td>
+		</tr>
+	</table>
+</div>

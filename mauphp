@@ -1,0 +1,26 @@
+<?php
+	include_once("conexao.php");
+	//consulta para receber os id's das perguntas disponíveis para sorteio
+	
+	/* $resultado = mysqli_query($conn,"SELECT * FROM cad_perguntas where ativo = 1 ORDER BY rand() LIMIT 20;");
+	$perguntasid = mysqli_fetch_array($resultado);
+	
+
+	echo $idpergunta;
+	$resultado = mysqli_query($conn,"select * from cad_perguntas where id='$idpergunta'");
+	$pergunta = mysqli_fetch_array($resultado);
+
+	$numbers = array('resp1','resp2','resp3','resp4');
+	shuffle($numbers);
+	foreach ($numbers as $number) {
+		echo "$number ";
+	} */
+	
+	$result = mysqli_query("SELECT * FROM cad_perguntas where ativo = 1 ORDER BY rand() LIMIT 20;");
+	$rows = array();
+	while($r = mysqli_fetch_assoc($result)) {
+     $rows['object_name'][] = $r;
+   }
+
+	print json_encode($rows);
+?>

@@ -1,0 +1,23 @@
+<h2>
+	Você acertou {{mostrarPorcentagemAcerto()}}% das perguntas, {{totalAcertos()}} de {{dados.length}}.
+</h2>
+<input type="button" value="Gerar certificado" ng-click="goToCertificado()">
+
+<h3>Respostas</h3>
+<table>
+	<tr ng-repeat="pergunta in dados track by $index">
+		<td style="width: 1110px;">
+			<table>
+				<tr>
+					<td><b>{{$index + 1}})</b></td>
+					<td><span ng-bind-html="pergunta.pergunta | unsafe"></span></td>
+				</tr>
+			</table>
+			<br>
+			<b>Resposta correta: </b> <span ng-bind-html="pergunta.resp4 | unsafe"></span>
+			<br>
+			<b>Respondido: </b> <span ng-bind-html="respostas[$index] | unsafe"></span>
+			<hr>
+		</td>
+	</tr>
+</table>
